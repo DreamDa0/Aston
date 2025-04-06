@@ -34,7 +34,9 @@ public class LessonOne {
         aFourteen(2,3);
     }
     public static void printThreeWords(){
-        System.out.println(" -Orange \n -Banana\n -Apple");
+        System.out.println("Orange");
+        System.out.println("Banana");
+        System.out.println("Apple");
     }
     public static void checkSummSing(){
         int a=10;
@@ -46,26 +48,27 @@ public class LessonOne {
             System.out.println("Сумма отрицательная");
         }
     }
-    public static void printColor(){
-        int value=0;
-        if (value<=0){
+    public static void printColor() {
+        int value = 99;
+        if (value <= 0) {
             System.out.println("Красный");
         }
-        else {
+        if (value <= 100) {
             System.out.println("Желтый");
         }
-        if (value>100){
+        if (value > 100) {
             System.out.println("Зеленый");
         }
+
     }
     public static void compareNumbers(){
         int a=11;
         int b=24;
-        if (a>=b){
-            System.out.println("a>=b");
+        if (a >= b){
+            System.out.println("a >= b");
         }
         else {
-            System.out.println("a<b");
+            System.out.println("a < b");
         }
     }
 
