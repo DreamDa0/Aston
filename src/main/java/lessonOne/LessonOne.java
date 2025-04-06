@@ -4,7 +4,6 @@ package lessonOne;
  *	задание к занятию 1
  */
 
-
 public class LessonOne {
 
     public static void main(String[] args) {
