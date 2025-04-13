@@ -3,6 +3,10 @@ package Lesson_3;
 public class Cat extends Animal {
     private static int count;           // счетчик количества созданных животных класса Cat (котов)
     private static int countClone;      // счетчик количества клонированных животных класса Cat (котов)
+    private String name;
+    private int appetite;
+    private int satietyTime;
+    private int satiety;
 
     public Cat(String type, String name, int flying, int swims, int goes, int run, int crawling) {
         this.type = type;
@@ -36,6 +40,39 @@ public class Cat extends Animal {
         return clon;
     }
 
+    String getName() {
+        return name;
+    }
+
+    int getAppetite() {
+        return appetite;
+    }
+
+    int getSatietyTime() {
+        return satietyTime;
+    }
+
+    int getSatiety() {
+        return satiety;
+    }
+
+    void setSatiety(int satiety) {
+        this.satiety = satiety;
+    }
+
+    Cat(String name, int appetite, int satietyTime) {
+
+        this.name = name;
+        this.appetite = appetite;
+        this.satietyTime = satietyTime;
+        this.satiety = 0;
+    }
+
+    void eat(Plate p) {
+        p.decreaseFood(appetite);
+        satiety += satietyTime;
+    }
+
     @Override
     protected Object clone() throws CloneNotSupportedException {
         countClone++;
@@ -44,4 +81,5 @@ public class Cat extends Animal {
         clon.name = "КЛОН " + name;
         return clon;
     }
+
 }
